@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Football Score Tracker</string>
+    <string name="app_title">Football Score Tracker</string>
+    <string name="fb_formation_img">Image of football team formation</string>
+    <string name="start_score_zero">0</string>
+    <string name="team_a">Team A</string>
+    <string name="team_b">Team B</string>
+    <string name="team_a_score">Team A Score</string>
+    <string name="team_b_score">Team B Score</string>
+    <string name="td">Touchdown</string>
+    <string name="field_goals">Field Goal</string>
+    <string name="td_extra_point_txt">TD Extra Point\nTouchback</string>
+    <string name="extra_kick_txt">Kick Extra Point</string>
+    <string name="plus_six">+6</string>
+    <string name="plus_three">+3</string>
+    <string name="plus_two">+2</string>
+    <string name="plus_one">+1</string>
+    <string name="reset">Reset</string>
+</resources>
