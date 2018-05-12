@@ -10,7 +10,7 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/zero_height"
         android:background="@color/primary_dark"
         app:layout_constrainedHeight="true"
         app:layout_constraintBottom_toTopOf="@id/header_section"
@@ -22,7 +22,7 @@
 
     <TextView
         android:id="@+id/teamscore_a_txt"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/zero_height"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginEnd="@dimen/eight_dp"
@@ -33,7 +33,7 @@
         android:text="@string/team_a_score"
         android:textAlignment="center"
         android:textColor="@color/primary_light"
-        android:textSize="24sp"
+        android:textSize="@dimen/team_txt_size"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/team_a_points_txt"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,8 +43,46 @@
         app:layout_constraintVertical_chainStyle="spread_inside" />
 
     <TextView
+        android:id="@+id/team_a_points_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/eight_dp"
+        android:layout_marginLeft="@dimen/eight_dp"
+        android:layout_marginRight="@dimen/eight_dp"
+        android:layout_marginStart="@dimen/eight_dp"
+
+        android:text="@string/start_score_zero"
+        android:textAlignment="center"
+        android:textColor="@color/primary_light"
+        android:textSize="@dimen/score_txt_size"
+        app:layout_constraintBottom_toTopOf="@+id/teamscore_b_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/center_guide"
+        app:layout_constraintTop_toBottomOf="@+id/teamscore_a_txt" />
+
+    <TextView
+        android:id="@+id/team_b_points_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/eight_dp"
+        android:layout_marginEnd="@dimen/eight_dp"
+        android:layout_marginLeft="@dimen/eight_dp"
+        android:layout_marginRight="@dimen/eight_dp"
+        android:layout_marginStart="@dimen/eight_dp"
+        android:text="@string/start_score_zero"
+        android:textAlignment="center"
+        android:textColor="@color/primary_light"
+        android:textSize="@dimen/score_txt_size"
+        app:layout_constraintBottom_toTopOf="@+id/header_section"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/center_guide"
+        app:layout_constraintTop_toBottomOf="@+id/teamscore_b_txt" />
+
+    <TextView
         android:id="@+id/teamscore_b_txt"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/zero_height"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginEnd="@dimen/eight_dp"
@@ -54,7 +92,7 @@
         android:text="@string/team_b_score"
         android:textAlignment="center"
         android:textColor="@color/primary_light"
-        android:textSize="24sp"
+        android:textSize="@dimen/team_txt_size"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/team_b_points_txt"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,11 +100,10 @@
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/team_a_points_txt" />
 
-
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="@dimen/zero_width"
+        android:layout_height="@dimen/zero_height"
         android:contentDescription="@string/fb_formation_img"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/header_section"
@@ -80,17 +117,17 @@
 
     <TextView
         android:id="@+id/team_a"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/zero_width"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/eight_dp"
         android:layout_marginLeft="@dimen/eight_dp"
         android:layout_marginRight="@dimen/eight_dp"
         android:layout_marginStart="@dimen/eight_dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="@dimen/margin_twenty_four"
         android:text="@string/team_a"
         android:textAlignment="center"
         android:textColor="@color/primary_light"
-        android:textSize="24sp"
+        android:textSize="@dimen/team_txt_size"
         app:layout_constrainedWidth="false"
         app:layout_constraintEnd_toStartOf="@+id/center_guide"
         app:layout_constraintHorizontal_bias="1.0"
@@ -99,7 +136,7 @@
 
     <TextView
         android:id="@+id/team_b"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/zero_width"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/eight_dp"
         android:layout_marginLeft="@dimen/eight_dp"
@@ -109,7 +146,7 @@
         android:text="@string/team_b"
         android:textAlignment="center"
         android:textColor="@color/primary_light"
-        android:textSize="24sp"
+        android:textSize="@dimen/team_txt_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/center_guide"
         app:layout_constraintTop_toTopOf="@+id/header_section" />
@@ -132,18 +169,18 @@
     <Button
         android:id="@+id/add_td_team_b"
         android:layout_width="wrap_content"
-        android:layout_height="38dp"
+        android:layout_height="@dimen/btn_height"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:background="@color/accent"
-        android:text="@string/plus_six"
         android:onClick="addTouchdownTeamB"
+        android:text="@string/plus_six"
         app:layout_constraintBaseline_toBaselineOf="@+id/td_text"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/td_text"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/zero_width"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/eight_dp"
         android:layout_marginLeft="@dimen/eight_dp"
@@ -152,7 +189,7 @@
         android:text="@string/td"
         android:textAlignment="center"
         android:textColor="@color/primary_light"
-        android:textSize="18sp"
+        android:textSize="@dimen/btn_label_txt_size"
         android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@+id/add_td_team_a"
         app:layout_constraintEnd_toStartOf="@+id/add_td_team_b"
@@ -161,53 +198,53 @@
     <Button
         android:id="@+id/add_fieldgoal_team_a"
         android:layout_width="wrap_content"
-        android:layout_height="38dp"
+        android:layout_height="@dimen/btn_height"
         android:layout_marginLeft="32dp"
         android:layout_marginStart="32dp"
         android:background="@color/accent"
+        android:onClick="addFieldGoalTeamA"
         android:text="@string/plus_three"
         app:layout_constraintBottom_toTopOf="@+id/add_twoextra_team_a"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_td_team_a"
-        android:onClick="addFieldGoalTeamA"/>
+        app:layout_constraintTop_toBottomOf="@+id/add_td_team_a" />
 
     <Button
         android:id="@+id/add_fieldgoal_team_b"
         android:layout_width="wrap_content"
-        android:layout_height="38dp"
+        android:layout_height="@dimen/btn_height"
         android:background="@color/accent"
+        android:onClick="addFieldGoalTeamB"
         android:text="@string/plus_three"
         app:layout_constraintBaseline_toBaselineOf="@+id/field_goal_txt"
-        app:layout_constraintEnd_toEndOf="@+id/add_td_team_b"
-        android:onClick="addFieldGoalTeamB"/>
+        app:layout_constraintEnd_toEndOf="@+id/add_td_team_b" />
 
     <Button
         android:id="@+id/add_twoextra_team_a"
         android:layout_width="wrap_content"
-        android:layout_height="38dp"
+        android:layout_height="@dimen/btn_height"
         android:layout_marginLeft="32dp"
         android:layout_marginStart="32dp"
         android:background="@color/accent"
+        android:onClick="addTwoPointsTeamA"
         android:text="@string/plus_two"
         app:layout_constraintBottom_toTopOf="@+id/add_oneextra_team_a"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_fieldgoal_team_a"
-        android:onClick="addTwoPointsTeamA"/>
+        app:layout_constraintTop_toBottomOf="@+id/add_fieldgoal_team_a" />
 
     <Button
         android:id="@+id/add_twoextra_team_b"
         android:layout_width="wrap_content"
-        android:layout_height="38dp"
+        android:layout_height="@dimen/btn_height"
         android:background="@color/accent"
+        android:onClick="addTwoPointsTeamB"
         android:text="@string/plus_two"
         app:layout_constraintBottom_toBottomOf="@+id/two_extra_points_txt"
         app:layout_constraintEnd_toEndOf="@+id/add_fieldgoal_team_b"
-        app:layout_constraintTop_toTopOf="@+id/two_extra_points_txt"
-        android:onClick="addTwoPointsTeamB"/>
+        app:layout_constraintTop_toTopOf="@+id/two_extra_points_txt" />
 
     <TextView
         android:id="@+id/field_goal_txt"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/zero_width"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/eight_dp"
         android:layout_marginLeft="@dimen/eight_dp"
@@ -215,8 +252,8 @@
         android:layout_marginStart="@dimen/eight_dp"
         android:text="@string/field_goals"
         android:textAlignment="center"
-        android:textSize="18sp"
         android:textColor="@color/primary_light"
+        android:textSize="@dimen/btn_label_txt_size"
         android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@+id/add_fieldgoal_team_a"
         app:layout_constraintEnd_toStartOf="@+id/add_fieldgoal_team_b"
@@ -224,7 +261,7 @@
 
     <TextView
         android:id="@+id/two_extra_points_txt"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/zero_width"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/eight_dp"
         android:layout_marginLeft="@dimen/eight_dp"
@@ -232,8 +269,8 @@
         android:layout_marginStart="@dimen/eight_dp"
         android:text="@string/td_extra_point_txt"
         android:textAlignment="center"
-        android:textSize="18sp"
         android:textColor="@color/primary_light"
+        android:textSize="@dimen/btn_label_txt_size"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/add_twoextra_team_a"
         app:layout_constraintEnd_toStartOf="@+id/add_twoextra_team_b"
@@ -250,33 +287,33 @@
     <Button
         android:id="@+id/add_oneextra_team_a"
         android:layout_width="wrap_content"
-        android:layout_height="38dp"
+        android:layout_height="@dimen/btn_height"
         android:layout_marginBottom="@dimen/eight_dp"
         android:layout_marginLeft="32dp"
         android:layout_marginStart="32dp"
         android:background="@color/accent"
+        android:onClick="addOnePointTeamA"
         android:text="@string/plus_one"
         app:layout_constrainedHeight="false"
         app:layout_constrainedWidth="false"
         app:layout_constraintBottom_toTopOf="@+id/above_reset_btn"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_twoextra_team_a"
-        android:onClick="addOnePointTeamA"/>
+        app:layout_constraintTop_toBottomOf="@+id/add_twoextra_team_a" />
 
     <Button
         android:id="@+id/add_oneextra_team_b"
         android:layout_width="wrap_content"
-        android:layout_height="38dp"
+        android:layout_height="@dimen/btn_height"
         android:background="@color/accent"
+        android:onClick="addOnePointTeamB"
         android:text="@string/plus_one"
         app:layout_constraintBottom_toBottomOf="@+id/one_extra_points_txt"
         app:layout_constraintEnd_toEndOf="@+id/add_twoextra_team_b"
-        app:layout_constraintTop_toTopOf="@+id/one_extra_points_txt"
-        android:onClick="addOnePointTeamB"/>
+        app:layout_constraintTop_toTopOf="@+id/one_extra_points_txt" />
 
     <TextView
         android:id="@+id/one_extra_points_txt"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/zero_width"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/eight_dp"
         android:layout_marginLeft="@dimen/eight_dp"
@@ -284,8 +321,8 @@
         android:layout_marginStart="@dimen/eight_dp"
         android:text="@string/extra_kick_txt"
         android:textAlignment="center"
-        android:textSize="18sp"
         android:textColor="@color/primary_light"
+        android:textSize="@dimen/btn_label_txt_size"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/add_oneextra_team_a"
         app:layout_constraintEnd_toStartOf="@+id/add_oneextra_team_b"
@@ -302,7 +339,7 @@
     <Button
         android:id="@+id/reset_btn"
         android:layout_width="wrap_content"
-        android:layout_height="38dp"
+        android:layout_height="@dimen/btn_height"
         android:layout_marginBottom="@dimen/eight_dp"
         android:layout_marginEnd="@dimen/eight_dp"
         android:layout_marginLeft="@dimen/eight_dp"
@@ -310,12 +347,12 @@
         android:layout_marginStart="@dimen/eight_dp"
         android:layout_marginTop="@dimen/eight_dp"
         android:background="@color/accent"
+        android:onClick="trackerReset"
         android:text="@string/reset"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/above_reset_btn"
-        android:onClick="trackerReset"/>
+        app:layout_constraintTop_toTopOf="@+id/above_reset_btn" />
 
     <android.support.constraint.Guideline
         android:id="@+id/header_section"
@@ -324,42 +361,5 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.39" />
 
-    <TextView
-        android:id="@+id/team_a_points_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/eight_dp"
-        android:layout_marginLeft="@dimen/eight_dp"
-        android:layout_marginRight="@dimen/eight_dp"
-        android:layout_marginStart="@dimen/eight_dp"
-
-        android:text="@string/start_score_zero"
-        android:textAlignment="center"
-        android:textColor="@color/primary_light"
-        android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@+id/teamscore_b_txt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/center_guide"
-        app:layout_constraintTop_toBottomOf="@+id/teamscore_a_txt" />
-
-    <TextView
-        android:id="@+id/team_b_points_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/eight_dp"
-        android:layout_marginEnd="@dimen/eight_dp"
-        android:layout_marginLeft="@dimen/eight_dp"
-        android:layout_marginRight="@dimen/eight_dp"
-        android:layout_marginStart="@dimen/eight_dp"
-        android:text="@string/start_score_zero"
-        android:textAlignment="center"
-        android:textColor="@color/primary_light"
-        android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@+id/header_section"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/center_guide"
-        app:layout_constraintTop_toBottomOf="@+id/teamscore_b_txt" />
 
 </android.support.constraint.ConstraintLayout>
