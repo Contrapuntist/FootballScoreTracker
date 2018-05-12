@@ -151,8 +151,9 @@
         android:layout_marginStart="@dimen/eight_dp"
         android:text="@string/td"
         android:textAlignment="center"
-        android:textColor="@color/primary_text"
+        android:textColor="@color/primary_light"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@+id/add_td_team_a"
         app:layout_constraintEnd_toStartOf="@+id/add_td_team_b"
         app:layout_constraintStart_toEndOf="@+id/add_td_team_a" />
@@ -190,7 +191,8 @@
         android:text="@string/plus_two"
         app:layout_constraintBottom_toTopOf="@+id/add_oneextra_team_a"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_fieldgoal_team_a" />
+        app:layout_constraintTop_toBottomOf="@+id/add_fieldgoal_team_a"
+        android:onClick="addTwoPointsTeamA"/>
 
     <Button
         android:id="@+id/add_twoextra_team_b"
@@ -200,7 +202,8 @@
         android:text="@string/plus_two"
         app:layout_constraintBottom_toBottomOf="@+id/two_extra_points_txt"
         app:layout_constraintEnd_toEndOf="@+id/add_fieldgoal_team_b"
-        app:layout_constraintTop_toTopOf="@+id/two_extra_points_txt" />
+        app:layout_constraintTop_toTopOf="@+id/two_extra_points_txt"
+        android:onClick="addTwoPointsTeamB"/>
 
     <TextView
         android:id="@+id/field_goal_txt"
@@ -213,6 +216,8 @@
         android:text="@string/field_goals"
         android:textAlignment="center"
         android:textSize="18sp"
+        android:textColor="@color/primary_light"
+        android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@+id/add_fieldgoal_team_a"
         app:layout_constraintEnd_toStartOf="@+id/add_fieldgoal_team_b"
         app:layout_constraintStart_toEndOf="@+id/add_fieldgoal_team_a" />
@@ -228,7 +233,8 @@
         android:text="@string/td_extra_point_txt"
         android:textAlignment="center"
         android:textSize="18sp"
-
+        android:textColor="@color/primary_light"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/add_twoextra_team_a"
         app:layout_constraintEnd_toStartOf="@+id/add_twoextra_team_b"
         app:layout_constraintStart_toEndOf="@+id/add_twoextra_team_a"
@@ -254,7 +260,8 @@
         app:layout_constrainedWidth="false"
         app:layout_constraintBottom_toTopOf="@+id/above_reset_btn"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_twoextra_team_a" />
+        app:layout_constraintTop_toBottomOf="@+id/add_twoextra_team_a"
+        android:onClick="addOnePointTeamA"/>
 
     <Button
         android:id="@+id/add_oneextra_team_b"
@@ -264,7 +271,8 @@
         android:text="@string/plus_one"
         app:layout_constraintBottom_toBottomOf="@+id/one_extra_points_txt"
         app:layout_constraintEnd_toEndOf="@+id/add_twoextra_team_b"
-        app:layout_constraintTop_toTopOf="@+id/one_extra_points_txt" />
+        app:layout_constraintTop_toTopOf="@+id/one_extra_points_txt"
+        android:onClick="addOnePointTeamB"/>
 
     <TextView
         android:id="@+id/one_extra_points_txt"
@@ -277,6 +285,8 @@
         android:text="@string/extra_kick_txt"
         android:textAlignment="center"
         android:textSize="18sp"
+        android:textColor="@color/primary_light"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/add_oneextra_team_a"
         app:layout_constraintEnd_toStartOf="@+id/add_oneextra_team_b"
         app:layout_constraintStart_toEndOf="@+id/add_oneextra_team_a"
